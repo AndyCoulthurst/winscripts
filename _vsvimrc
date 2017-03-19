@@ -1,0 +1,81 @@
+" VSVIMRC
+" Every unnecessary keystroke that can be saved is good for your health :)
+
+set bs=2     " make backspace behave like normal again
+
+noremap <c-j> <Esc><c-w>j
+noremap <c-k> <Esc><c-w>k
+noremap <c-l> <Esc><c-w>l
+noremap <c-h> <Esc><c-w>h
+
+noremap <S-Left> :vertical resize +5<CR>
+noremap <S-Right> :vertical resize -5<CR>
+noremap <S-Down> :res +5<CR>
+noremap <S-Up> :res -5<CR>
+
+" easier moving of code blocks
+" Try to go into visual mode (v), thenselect several lines of code here and
+" then press ``>`` several times.
+vnoremap < <gv
+vnoremap > >gv
+
+" Showing line numbers and length
+set number  " show line numbers
+set nowrap  " don't automatically wrap on load
+
+" Real programmers don't use TABs but spaces
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
+" Make search case insensitive
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+
+" Save key (some terminals need old tty behavior turning off)
+nnoremap <c-s> :w<CR>
+vnoremap <c-s> <Esc><c-s>gv
+inoremap <c-s> <Esc><c-s>
+
+"" insert spaces in nm
+nnoremap <Space> i<Space><Esc>
+
+"" disable arrowkeys to speed up
+"noremap <Up> <NOP>
+"noremap <Down> <NOP>
+"noremap <Left> <NOP>
+"noremap <Right> <NOP>
+"inoremap <up> <nop>
+"inoremap <down> <nop>
+"inoremap <left> <nop>
+"inoremap <right> <nop>
+
+"Explicit cancelling in windows - may remap to jk
+inoremap <A-h> <Esc>h
+inoremap <A-l> <Esc>l
+inoremap <A-k> <Esc>k
+inoremap <A-j> <Esc>j
+
+nnoremap gj :m .+1<CR>k
+nnoremap gk :m .-2<CR>
+
+"" Visual Studio Mappings
+
+vnoremap S  :vsc Edit.SurroundWith<CR>
+
+nnoremap gwo :vsc FullScreen<cr>
+nnoremap gws :vsc Window.Split<cr>
+nnoremap gwc :vsc Window.Split<cr>
+nnoremap d<tab> :vsc Window.CloseDocumentWindow<cr>
+nnoremap gwC :vsc Window.CloseDocumentWindow<cr>
+nnoremap gwH :vsc Window.MovetoPreviousTabGroup<cr>
+nnoremap gwL :vsc Window.MovetoNextTabGroup<cr>
+nnoremap gwS :vsc Window.NewHorizontalTabGroup<cr>
+nnoremap gwv :vsc Window.NewVerticalTabGroup<cr>
+nnoremap gwT :vsc Window.Float<cr>
+nnoremap gwj :vsc Window.NextSplitPane<cr>
+nnoremap gwk :vsc Window.PreviousSplitPane<cr>
