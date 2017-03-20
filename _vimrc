@@ -222,4 +222,13 @@ cmap w!! w !sudo tee > /dev/null %
 
 colorscheme molokai
 
-noremap <Leader>ma :call VimuxRunCommand("clear; make clean; make")<CR>
+"Windows 
+
+set shell=C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe\ -ExecutionPolicy\ Unrestricted
+set shellcmdflag=-c
+set shellpipe=|
+set shellredir=>
+
+" Execute line as cmd string
+noremap <leader>rr yy:silent exec "! start "@"<cr>
+noremap <leader>ee yy:silent exec "!Invoke-Item "@"<cr>
