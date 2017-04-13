@@ -80,8 +80,8 @@ nnoremap gwT :vsc Window.Float<cr>
 nnoremap gwj :vsc Window.NextSplitPane<cr>
 nnoremap gwk :vsc Window.PreviousSplitPane<cr>
 
-vnoremap gj :vsc Edit.MoveSelectedLinesDown
-vnoremap gk :vsc Edit.MoveSelectedLinesUp
+"vnoremap gj :vsc Edit.MoveSelectedLinesDown<cr>
+"vnoremap gk :vsc Edit.MoveSelectedLinesUp<cr>        "Broken in vs2010   
 
 noremap <leader>` :vsc View.NextError<cr>
 noremap <leader><leader>` :vsc View.PreviousError<cr>
